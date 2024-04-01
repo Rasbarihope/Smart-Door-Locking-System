@@ -1,0 +1,37 @@
+### 1. Include Libraries: This line brings in extra code that helps us use the keypad.
+
+### 2. Define Password and Variables:
+
+password: The secret numbers you need to press to unlock the door.
+position: Keeps track of which number in the password you're currently entering.
+### 3.Define Keypad Layout:
+
+keys: Tells the program which numbers and symbols are on the keypad.
+ROWS and COLS: The number of rows and columns on the keypad.
+### 4.Define Keypad and Pins:
+
+rowPins and colPins: Connect the keypad to the Arduino.
+keypad: Sets up the keypad with the layout and pin connections.
+### 5.Define Lock Pin:
+
+Lock: The pin connected to the lock that opens and closes the door.
+### 6.Setup Function:
+
+pinMode(Lock, OUTPUT): Tells the Arduino to use the lock pin to send signals.
+LockedPosition(true): Locks the door when the program starts.
+### 7.Loop Function:
+
+keypad.getKey(): Checks if a key on the keypad is pressed.
+If '*' or '#' is pressed, reset the password input.
+If the pressed key matches the next digit in the password, move to the next position.
+If the full password is entered, unlock the door.
+###** 8.LockedPosition Function:
+
+LockedPosition(int locked): Locks or unlocks the door based on the locked parameter.
+In short, the code uses a keypad to enter a password. When the correct password is entered, it unlocks the door by controlling a lock connected to the Arduino.
+
+
+
+
+
+
